@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+	
+	<div class="hap-playlist-item" data-type="audio" data-mp3="media/audio/1/01.mp3" data-artist="Tim McMorris" data-title="A Bright And Hopeful Future" data-thumb="media/thumb/art/01.jpg" data-share="http://audiojungle.net/item/a-bright-and-hopeful-future/236175?ref=Tean"></div>
+
+    <div class="hap-playlist-item" data-type="audio" data-mp3="media/audio/1/02.mp3" data-artist="Tim McMorris" data-title="Be My Valentine" data-thumb="media/thumb/art/02.jpg" data-share="http://audiojungle.net/item/be-my-valentine/154579?ref=Tean" data-link="http://codecanyon.net/user/Tean/portfolio" data-target="_blank" data-download="media/audio/1/01.mp3"></div>
+	
+</data>

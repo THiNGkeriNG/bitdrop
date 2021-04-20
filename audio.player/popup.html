@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HTML5 Audio Player with Playlist</title>
+       
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" media="all" /><!-- playlist scroll -->
+        <link rel="stylesheet" type="text/css" href="css/_global.css" />
+        <link id="hap-popup-css-head" rel="stylesheet" type="text/css" href="css/art-wide.css" /><!-- set css file for the demo you use -->
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- icons -->
+
+        <!-- NOTE: this file is opened internally when player is opened in popup window. You cannot launch this file on its own! -->
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                border:0;
+                outline:none;
+            }
+            a{ 
+                text-decoration: none; 
+            }
+            body{
+              
+            }
+            .hap-wrapper-popup{
+                top:3px!important;
+                bottom:auto!important;
+            }
+            #hap-wrapper{
+                margin: 0!important;
+            }
+        </style>
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script><!-- playlist scroll -->
+        <script src="js/jsmediatags.min.js"></script><!-- id3 tags -->
+        <script src="js/new.js?4"></script><!-- main js file -->			
+        <script>
+	
+            var hasLocalStorage = HAPUtils.hasLocalStorage();  
+
+            window.onbeforeunload = function(){
+                if(hasLocalStorage)localStorage.removeItem('hap_popup');
+            }
+            window.onunload = function(){
+                if(hasLocalStorage)localStorage.removeItem('hap_popup');
+            }
+            /*document.onpagehide = function(){
+                if(hasLocalStorage)localStorage.removeItem('hap_popup');
+            }*/
+
+            jQuery(document).ready(function($){
+                var parent_window = window.opener;
+                if(parent_window && parent_window.hapNotifyParent != undefined){
+                    try {
+                        parent_window.hapNotifyParent();
+                    }catch(e){
+                        if(hasLocalStorage)localStorage.removeItem('hap_popup');
+                        alert('hapNotifyParent error: ' + e.message);
+                        self.close();
+                    }
+                }
+            }); 
+
+            function initPopup(wrapper, wrapper_id, settings, css, playlist_list) {
+
+                if(hasLocalStorage)localStorage.setItem('hap_popup',1);
+
+                if(css)jQuery('head').append(css);
+                else if(settings.cssUrl)$('#hap-popup-css-head').attr('href', settings.cssUrl)
+
+                jQuery('body').append(wrapper);
+                if(playlist_list)jQuery('body').append(playlist_list);
+
+                //some changes, remove popup button
+                jQuery('#'+wrapper_id).addClass('hap-wrapper-popup').find('.hap-popup-toggle, .hap-playlist-toggle').remove();
+
+                settings.isPopup = true;
+
+                var instance = jQuery('#'+wrapper_id).hap(settings);
+
+                self.focus();
+
+                return instance;//for api
+
+            }
+
+        </script>
+        
+	</head>
+	<body>
+
+	</body>
+</html>

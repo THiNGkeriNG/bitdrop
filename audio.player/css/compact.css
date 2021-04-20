@@ -1,0 +1,124 @@
+
+
+.hap-compact-1{
+	position: relative;
+	width: 60px;
+	height:60px;
+}
+.hap-compact-1 .hap-btn{
+    display: none;
+    height:100%;
+}
+.hap-compact-1 .hap-contr-btn{
+    width: 60px;
+    height:60px;
+    position: relative;
+    cursor: pointer;
+    background: #607D8B;
+    border-radius: 100%;
+}
+.hap-compact-1 .hap-contr-btn svg{
+    color:#fff;
+}
+.hap-compact-1 .hap-btn:hover svg,
+.hap-compact-1 .hap-contr-btn:hover > svg,
+.hap-compact-1 .hap-contr-btn-hover svg{
+    color:#ffeb3b;
+} 
+.hap-compact-1 .hap-contr-btn svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 22px;
+    fill:currentColor;
+    transition: color .1s ease-out;
+}
+
+.hap-compact-2{
+	position: relative;
+	background: #795548;
+	width: 200px;
+	height: 60px;
+	border-radius: 8px;
+}
+.hap-compact-2 .hap-btn{
+    display: none;
+    height:100%;
+}
+.hap-compact-2 .hap-contr-btn{
+    width: 50px;
+    height:60px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+.hap-compact-2 .hap-contr-btn svg{
+    color:#ddd;
+}
+.hap-compact-2 .hap-btn:hover svg,
+.hap-compact-2 .hap-contr-btn:hover > svg,
+.hap-compact-2 .hap-contr-btn-hover svg{
+    color:#fff;
+} 
+.hap-compact-2 .hap-contr-btn svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 17px;
+    fill:currentColor;
+    transition: color .1s ease-out;
+}
+
+.hap-compact-2 .hap-playback-toggle svg{
+	height: 22px;
+}
+
+.hap-compact .hap-volume-wrap{
+	position:relative;
+	width: 50px;
+    height:60px;
+    float: left;
+}
+.hap-compact .hap-volume-seekbar{
+	position:absolute;
+	left: 9px;
+    top: -122px;
+    width: 30px;
+    height: 120px;
+	cursor: pointer;
+	touch-action: none;
+	background: #795548;
+	display: none;
+}
+.hap-compact .hap-volume-bg-hit{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -3px;
+    height: 5px;
+    background: rgba(0,0,0,0);
+}
+.hap-compact .hap-volume-bg{
+	position:absolute;
+	top:15px;
+	left:13px;
+	width:5px;
+	height:90px;
+	background:#ccc;
+}
+.hap-compact .hap-volume-level{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background:#ff5722;
+	transition: all 0.3s ease-in-out; 
+}
+.hap-compact .hap-volume-wrap:hover .hap-volume-seekbar{
+	display: block;
+}
+
+
+

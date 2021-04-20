@@ -1,0 +1,215 @@
+
+.hap-tiny1{
+    position: relative;
+    height:26px;
+    width: 60px;
+    display:inline-block;
+}
+.hap-tiny2{
+    position: relative;
+    height:26px;
+    width: 120px;
+    display:inline-block;
+}
+.hap-tiny3{
+    position: relative;
+    height:26px;
+    width: 210px;
+    display:inline-block;
+}
+
+
+.hap-tiny .hap-player-holder{
+	display: flex;
+	flex-direction:row;
+	position:relative;
+	height: 100%;
+}
+.hap-tiny.hap-tiny-dark .hap-player-holder {
+	background: rgb(76,76,76); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	box-shadow: 1px 1px 15px #222;
+}
+.hap-tiny.hap-tiny-light .hap-player-holder {
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background-image: -o-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background-image: -ms-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    box-shadow: 1px 1px 1px #ddd;
+}
+
+.hap-tiny .hap-btn{
+	display: none;
+	height:100%;
+}
+.hap-tiny .hap-contr-btn{
+	box-sizing: border-box;  
+	position:relative;
+	width:30px;	
+	height:100%;
+	border-right: 1px solid #555;    
+}
+.hap-tiny.hap-tiny-dark .hap-contr-btn svg{
+	color:#ccc;
+}
+.hap-tiny.hap-tiny-dark .hap-btn:hover svg,
+.hap-tiny.hap-tiny-dark .hap-contr-btn:hover > svg,
+.hap-tiny.hap-tiny-dark .hap-contr-btn-hover svg{
+	color:#fff!important;
+} 
+.hap-tiny.hap-tiny-light .hap-contr-btn svg{
+	color:#666;
+}
+.hap-tiny.hap-tiny-light .hap-btn:hover svg,
+.hap-tiny.hap-tiny-light .hap-contr-btn:hover > svg,
+.hap-tiny.hap-tiny-light .hap-contr-btn-hover svg{
+	color:#fff!important;
+} 
+.hap-tiny .hap-contr-btn svg{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	height: 13px;
+	fill:currentColor;
+	transition: color .1s ease-out;
+}
+
+.hap-tiny .hap-volume-wrapper{
+	position:relative;
+	width:30px;	
+	height:100%;
+}
+.hap-tiny .hap-volume-toggle{
+	border-right:none!important; 
+}
+.hap-tiny .hap-volume-wrapper:hover .hap-volume-seekbar{
+	display: block;
+}
+.hap-tiny .hap-volume-seekbar{
+	position:absolute;
+	top:-80px;
+	left:0;
+	width:30px;
+	height:80px;
+	display:none;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-tiny.hap-tiny-dark .hap-volume-seekbar{
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.hap-tiny.hap-tiny-light .hap-volume-seekbar{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 1px solid #cbcbcb;
+}
+.hap-tiny .hap-volume-bg{
+	position:absolute;
+	width:3px;
+	height:60px;
+	left:13px;
+	bottom:10px;
+}
+.hap-tiny.hap-tiny-dark .hap-volume-bg{
+	background:#888;
+}
+.hap-tiny.hap-tiny-light .hap-volume-bg{
+	background:#888;
+}
+.hap-tiny .hap-volume-level{
+	position:absolute;
+	width:100%;
+	height:30px;
+	left:0;
+	bottom:0;
+}
+.hap-tiny.hap-tiny-dark .hap-volume-level{
+	background:#fff;
+}
+.hap-tiny.hap-tiny-light .hap-volume-level{
+	background:#fff;
+}
+
+.hap-tiny .hap-seekbar{
+	position:relative;
+	height:100%;
+	width: 150px;
+	touch-action: none;
+	cursor: pointer;
+}
+.hap-tiny .hap-progress-bg{
+	position:absolute;
+	height:3px;
+	top:12px;
+	left:10px;
+	right:10px;
+}
+.hap-tiny.hap-tiny-dark .hap-progress-bg{
+	background:#666;
+}
+.hap-tiny.hap-tiny-light .hap-progress-bg{
+	background:#666;
+}
+.hap-tiny .hap-load-level{
+	position:absolute;
+	height:100%;
+	top:0;
+	left:0;
+	right:0;
+}
+.hap-tiny.hap-tiny-dark .hap-load-level{
+	background:#888;
+}
+.hap-tiny.hap-tiny-light .hap-load-level{
+	background:#888;
+}
+.hap-tiny .hap-progress-level{
+	position:absolute;
+	height:100%;
+	top:0;
+	left:0;
+	right:0;
+}
+.hap-tiny.hap-tiny-dark .hap-progress-level{
+	background:#fff;
+}
+.hap-tiny.hap-tiny-light .hap-progress-level{
+	background:#fff;
+}
+
+.hap-tiny .hap-tooltip{
+	position:absolute;
+	text-align:center;
+	z-index:10000;
+	pointer-events:none;
+	display:none;
+	font-size:12px!important;
+	padding:2px 5px !important;
+	line-height:20px !important;
+	white-space:nowrap;
+}
+.hap-tiny.hap-tiny-dark .hap-tooltip{
+	background: #333;
+	border:1px solid #444;
+	box-shadow: 1px 1px 3px #111;
+	color:#fff!important;
+}
+.hap-tiny.hap-tiny-light .hap-tooltip{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	box-shadow: 1px 1px 1px #ddd;
+	color:#666!important;
+	border:1px solid #ccc;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HTML5 Audio Player with Playlist</title>
+        
+		<style type="text/css">
+      
+            .hap-inline{
+                position:relative;
+                top:2px;
+                width:16px;
+                height:16px;
+                margin-right:3px;
+                display: inline-block;
+            }
+
+            .hap-text-link{
+                text-decoration: underline;
+                color:green;
+            }
+
+        </style>
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/new.js"></script>			
+        <script>
+
+            var active_inline_url,
+            active_inline_item,
+            play_ic = "data/misc/inline_play.png",
+            pause_ic = "data/misc/inline_pause.png";
+
+            function checkInlineLinks(){
+        
+                $('.hap-text-link').each(function(){
+
+                    var a = $(this)
+                    .prepend('<img class="hap-inline" src="'+play_ic+'"/>')
+                    .on('click',function(e){
+
+                        var path = $(this).attr('href');
+
+                        if(active_inline_url && active_inline_url == path){//already active link
+                            player.togglePlayback();
+                        }else{
+                            active_inline_url = path;
+                            
+                            if(active_inline_item)setIcons(false);
+                            active_inline_item = a;
+
+                            player.inputAudio({type: 'audio', mp3: path });
+                        }
+                        return false;
+                    });
+                });
+            }
+
+            function setIcons(playing){
+                if(playing)active_inline_item.find('img.hap-inline').attr('src', pause_ic);
+                else active_inline_item.find('img.hap-inline').attr('src', play_ic);
+            }
+
+            var player;  
+            jQuery(document).ready(function($) {
+                
+                var settings = {
+                    instanceName:"player1",
+                    sourcePath:"",
+                    playlistList:"",
+                    activePlaylist:"",
+                    activeItem:-1,
+                    volume:0.5,
+                    autoPlay:true,
+                    preload:"auto",
+                    randomPlay:false,
+                    loopingOn:true,
+                };
+
+                player = $("#hap-wrapper").on('setupDone', function(e, data){
+                    //called when plugin has been instantiated and is ready to use api, returns (instance, instanceName)
+                    checkInlineLinks();
+                }).on('soundPlay', function(e, data){
+                    //called on song play, returns (instance, instanceName, counter)
+                    setIcons(true);
+                }).on('soundPause', function(e, data){
+                    //called on song pause, returns (instance, instanceName, counter)
+                    setIcons();
+                }).hap(settings);
+
+            });
+
+        </script>
+        
+	</head>
+	<body>
+
+        <h1>Inline mp3 links</h1><br>
+        
+        <p>
+        Pause and play icons will automatically be attached to every song in text.<br><br><br>Like this for example: <a class="hap-text-link" href="media/audio/2/01.mp3">Soundroll - A Way To The Top</a> ut laoreet hendrerit mi. Nam vestibulum viverra diam. Nullam eros ipsum, rutrum ut, ultricies sed, congue sed, est. Pellentesque porttitor. Donec dictum urna eu mi. Maecenas in lorem. Vestibulum in ipsum. Donec vitae lectus. Etiam commodo velit ut mi condimentum tellus tortor ut mi. Pellentesque habitant morbi tristique senectus. Praesent ac nunc <a class="hap-text-link" href="media/audio/1/04.mp3">Tim McMorris - Happy Days Are Here To Stay</a>. Class aptent taciti maecenas nec tellus, a mi ornare auctor. Sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam sollicitudin, nisi egestas scelerisque pretium, odio enim sodales metus, venenatis vulputate arcu quam eget purus. Fusce convallis mattis nunc. Fusce non nunc. Proin magna nunc, congue ut, dapibus eu, placerat vitae, erat. Nam egestas pretium <a class="hap-text-link" href="media/audio/1/06.mp3">Tim McMorris - Marketing Advertising Music</a> mauris. Cras posuere, est nec egestas scelerisque, tellus justo scelerisque nisi, at consequat ante dolor eget diam. Vel semper lacus tortor vitae metus. 
+        </p>
+        <br><br>
+        
+        <div id="hap-wrapper"></div>
+	
+	</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+	
+	<div class="hap-playlist-item" data-type="podcast" data-path="http://www.kingola.com/feed/podcast/" data-limit="5"></div>
+	
+	<div class="hap-playlist-item" data-type="soundcloud" data-path="http://soundcloud.com/astateoftrance" data-limit="5"></div>
+	
+</data>

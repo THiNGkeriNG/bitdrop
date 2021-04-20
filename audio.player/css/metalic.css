@@ -1,0 +1,439 @@
+#hap-wrapper{
+	position: relative;
+	font-family: Arial, sans-serif;
+	width: 100%;
+	min-width:320px;
+	margin: 100px auto;
+	max-width:900px;
+	display:none;
+}
+.hap-metalic .hap-player-outer{
+	transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    box-shadow: 1px 1px 3px #333;
+}
+.hap-metalic .hap-player-image{
+	position:absolute;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hap-metalic .hap-player-bg{
+	position:absolute;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background: rgba(30,30,30,0.9); 
+}
+.hap-metalic .hap-player-outer{
+	position:relative;
+	height: 350px;
+	width: 100%;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+}
+.hap-metalic .hap-player-holder{
+	position:relative;
+	padding: 30px 30px 10px 30px;
+	box-sizing:border-box;
+}
+.hap-metalic .hap-player-thumb-wrapper{
+	position:relative;
+	overflow:hidden;
+	height: 250px;
+	width: 250px;
+}
+.hap-metalic .hap-player-thumb{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+    background-size: cover;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.hap-metalic .hap-btn{
+	display: none;
+	height:100%;
+}
+.hap-metalic .hap-contr-btn{
+	position: relative;
+    width: 30px;
+    height: 100%;
+    float: left;
+}
+/*  svg icons */
+.hap-contr-btn svg{
+	color:#fff;
+}
+.hap-metalic .hap-btn:hover svg,
+.hap-metalic .hap-contr-btn:hover > svg,
+.hap-metalic .hap-contr-btn-hover svg{
+	color:#3FBAF3!important;
+} 
+.hap-metalic .hap-contr-btn svg{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	height: 18px;
+	fill:currentColor;
+	transition: color .1s ease-out;
+}
+
+.hap-metalic .hap-player-controls{
+	margin-top:10px;
+	overflow: hidden;
+}
+
+.hap-metalic .hap-seekbar{
+	position:relative;
+	height:20px;
+	cursor: pointer;
+	touch-action: none;
+	overflow: hidden;
+}
+.hap-metalic .hap-progress-bg{
+	position:relative;
+	background:#888;
+	width:100%;
+	top:5px;
+	height:2px;
+}
+.hap-metalic .hap-load-level{
+	position:absolute;
+	background:#888;
+	top:0;
+	height:100%;
+}
+.hap-metalic .hap-progress-level{
+	position:absolute;
+	background:#fff;
+	top:0;
+	height:100%;
+}
+
+.hap-metalic .hap-controls{
+	position: relative;
+	height:30px;
+}
+.hap-metalic .hap-prev-toggle,
+.hap-metalic .hap-playback-toggle,
+.hap-metalic .hap-next-toggle{
+	position: relative;
+	width:30px;
+	height:30px;
+	margin-right: 10px;
+	float: left;
+}
+.hap-metalic .hap-playback-toggle svg{
+	height: 24px;
+}
+.hap-metalic .hap-playback-toggle .fa-play,
+.hap-metalic .hap-playback-toggle .fa-pause{
+	font-size: 24px;
+}
+.hap-metalic .hap-playback-toggle ion-icon{
+	font-size: 30px;
+}
+.hap-metalic .hap-playback-toggle i{
+	font-size: 36px;
+}
+
+.hap-metalic .hap-volume-wrapper{
+	position: relative;
+	width:110px;
+	height:30px;
+	float: right;
+}
+.hap-metalic .hap-volume-toggle{
+	position: relative;
+	width:30px;	
+	height:30px;
+	cursor: pointer;
+}
+.hap-metalic .hap-volume-seekbar{
+	position: absolute;
+	left:30px;
+	top:5px;
+	width:80px;
+	height:20px;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-metalic .hap-volume-bg{
+	position:absolute;
+	top:9px;
+	left:10px;
+	width:60px;
+	height:2px;
+	background:#ddd;
+}
+.hap-metalic .hap-volume-level{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	background:#3FBAF3;
+}
+
+.hap-metalic .hap-share-toggle{
+	position: relative;
+	width:30px;
+	height:30px;
+	margin-left: 5px;
+	float: right;
+}
+
+#hap-playlist-list{
+	display:none;
+}
+.hap-metalic .hap-playlist-holder{
+	position:relative;
+	top:0;
+	height: 100%;
+	overflow:hidden;
+	flex:1;
+}
+.hap-metalic .hap-playlist-inner{
+	margin: 30px 10px 30px 10px;
+    position: relative;
+    height: calc(100% - 100px);
+}
+.hap-metalic .hap-playlist-item-content {
+	color:#999;
+}
+.hap-metalic .hap-playlist-duration{
+	font-size: 12px;
+}
+.hap-metalic .hap-playlist-date{
+	font-size: 11px;
+	color: #666;
+}
+.hap-metalic .hap-playlist-item-selected .hap-playlist-title-wrap{
+	color:#fff;
+}
+
+.hap-metalic .hap-download, .hap-link{
+	color:#999!important;
+}
+/* svg icons */
+.hap-metalic .hap-download svg,
+.hap-metalic .hap-link svg{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	height: 14px;
+	fill:currentColor;
+	transition: color .1s ease-out;
+}
+.hap-metalic .hap-download:hover svg, 
+.hap-metalic .hap-link:hover svg{
+	color:#fff!important;
+}
+
+.hap-metalic .hap-playlist-filter-msg span{
+	color: #3FBAF3;
+}
+.hap-metalic .hap-bottom-bar{
+	position:relative;
+	top:0;
+	height:30px;
+	overflow:hidden;
+	margin: 0 10px;
+}
+.hap-metalic .hap-search-filter{
+	position:relative;
+	width:125px!important;
+	height:18px!important;
+	top:50%;
+	margin:-9px 0 0 0!important;
+	padding:0 2px!important;
+	border:0!important;
+	-moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+	border-radius:0 !important;
+	background:#ddd !important;
+	color:#000 !important;
+	box-shadow:none!important; 
+	line-height:1!important; 
+	float: left;
+	outline:none;
+	font-size: 15px;
+}
+
+.hap-metalic .hap-sort-alpha{
+	position:relative;
+	left:5px;
+	top:0;
+	width:25px;
+	height:100%;
+	text-align: center;
+	float: left;
+}
+.hap-metalic .hap-bottom-bar-controls{
+	position: absolute;
+    right: 10px;
+    height: 100%;
+}
+
+.hap-metalic .hap-bottom-bar-controls .hap-contr-btn{
+	position:relative;
+	width:25px;
+	height:34px;
+	margin-left: 10px;
+	float: left;
+}
+
+.hap-metalic .hap-playback-rate-holder,
+.hap-metalic .hap-share-holder,
+.hap-metalic .hap-range-holder{
+    background: #222;
+    border: 1px solid #41414194;
+}
+
+/* dialog */
+
+.hap-metalic .hap-dialog{
+    box-shadow: 1px 1px 3px #333;
+}
+.hap-metalic .hap-dialog-header{
+	background: #333;
+}
+.hap-metalic .hap-dialog .hap-dialog-close svg {
+    color: #fff;
+}
+
+/* range */
+
+.hap-metalic .hap-range-bg{
+	top:15px;
+	height:2px;
+}
+
+.hap-metalic .hap-range-handle-a-hit{
+	border-bottom-color:#666;
+}
+.hap-metalic .hap-range-handle-a-hit:hover{
+	border-bottom-color:#3FBAF3;
+}
+.hap-metalic .hap-range-handle-b-hit{
+	border-top-color:#666;
+}
+.hap-metalic .hap-range-handle-b-hit:hover{
+	border-top-color:#3FBAF3;
+}
+
+.hap-metalic .hap-playback-rate-min,
+.hap-metalic .hap-playback-rate-max{
+	color: #999;
+}
+
+.hap-metalic .hap-range-min-time,
+.hap-metalic .hap-range-max-time{
+	color: #999;
+}
+
+.hap-metalic .hap-range-bg{
+	background:#ddd;
+}
+.hap-metalic .hap-range-level{
+	background:#3FBAF3;
+}
+
+/* playback rate */
+
+.hap-metalic .hap-playback-rate-bg{
+	height: 2px;
+	top:15px;
+}
+.hap-metalic .hap-playback-rate-bg{
+	background:#ddd;
+}
+.hap-metalic .hap-playback-rate-level{
+	background:#3FBAF3;
+}
+
+.hap-metalic .hap-tooltip{
+	background:#333;
+	border:1px solid #666;
+	color:#fff!important;
+}
+
+.hap-metalic .hap-preloader {
+    background-color: #fff;
+}
+
+/* lyrics popup */
+
+.hap-metalic .hap-dialog{
+	background-color: #222;
+}
+.hap-metalic .hap-lyrics-item {
+    color: #999;
+}
+
+
+/* statistics */
+
+.hap-metalic .hap-stats svg{
+	color:#666;
+}
+.hap-metalic .hap-play-count:hover > svg,
+.hap-metalic .hap-like-count:hover > svg,
+.hap-metalic .hap-download-count:hover > svg{
+	color:#2196F3;
+} 
+.hap-metalic .hap-stats span{
+	color:#666;
+}
+
+
+.hap-metalic.hap-breakpoint-800 .hap-player-outer{
+	height: auto;
+	flex-direction:column;
+}
+.hap-metalic.hap-breakpoint-800 .hap-player-thumb-wrapper{
+	width: 100%;
+	height: auto;
+	padding-top: 100%;
+	margin: 0;
+}
+.hap-metalic.hap-breakpoint-800 .hap-playlist-holder{
+	margin: 0 30px;
+}
+.hap-metalic.hap-breakpoint-800 .hap-playlist-inner{
+	margin: 20px 0;
+	min-height: 150px;
+	max-height: 250px;
+}
+.hap-metalic.hap-breakpoint-800 .hap-bottom-bar{
+	margin: 0;
+	height: 70px;
+}
+.hap-metalic.hap-breakpoint-800 .hap-sort-alpha{
+	display: none;
+}
+.hap-metalic.hap-breakpoint-800 .hap-bottom-bar-controls{
+	height: auto;
+}
+.hap-metalic.hap-breakpoint-800 .hap-search-filter{
+	width: 100%!important;
+	margin: 5px 0 0 0!important;
+}
+
+
+
+

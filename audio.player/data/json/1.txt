@@ -1,0 +1,39 @@
+[
+    {
+      "type": "audio",
+      "mp3": "media/audio/2/01.mp3",
+      "artist": "Soundroll",
+      "title": "A Way To The Top",
+      "thumb": "media/thumb/1/01.jpg",
+      "link": "http://www.google.com",
+      "target": "_blank",
+      "download": "media/audio/2/01.mp3",
+      "adPre": {
+          "src": "media/ads/human1.mp3"
+        },
+        "adMid": {
+          "interval": 10000,
+          "src": "media/ads/bong.mp3"
+        },
+        "adEnd": {
+          "src": "media/ads/human3.mp3"
+        }
+   },
+   {
+      "type": "audio",
+      "mp3": "media/audio/2/02.mp3",
+      "artist": "Soundroll",
+      "title": "Feel Good Journey",
+      "thumb": "media/thumb/1/02.jpg",
+      "playbackRate": 2,
+      "start": 5,
+      "end": 15
+   },
+   {
+      "type": "audio",
+      "mp3": "media/audio/2/03.mp3",
+      "artist": "Soundroll",
+      "title": "Fight No More",
+      "thumb": "media/thumb/1/03.jpg"
+   }
+] 

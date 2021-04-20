@@ -1,0 +1,523 @@
+
+#hap-wrapper{
+	position:fixed;
+	width:100%;
+	max-width: none;
+	bottom:0;
+	left:0;
+	font-family: Arial, Helvetica, sans-serif;
+	min-width: 310px;	
+	line-height:normal!important;
+	z-index:999999;
+	display: none;
+}
+.hap-fixed{
+	position:fixed;
+	width:100%;
+	max-width: none;
+	bottom:0;
+	left:0;
+	min-width: 310px;	
+	line-height:normal!important;
+	z-index:999999;
+	display: none;
+	margin: 0;
+}
+.hap-fixed .hap-player-outer{
+	transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.hap-fixed .hap-player-holder{
+	position: relative;
+	left:0;
+	background:#27363b;
+	width: 100%;
+    float: left;
+    height: 60px;
+}
+
+.hap-fixed .hap-btn{
+	display: none;
+	height:100%;
+}
+.hap-fixed .hap-contr-btn{
+	width: 25px;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.hap-fixed .hap-contr-btn svg{
+	color:#eee;
+}
+.hap-fixed .hap-btn:hover svg,
+.hap-fixed .hap-contr-btn:hover > svg,
+.hap-fixed .hap-contr-btn-hover svg{
+	color:#ffa48f;
+} 
+.hap-fixed .hap-contr-btn svg{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	height: 15px;
+	fill:currentColor;
+	transition: color .1s ease-out;
+}
+
+.hap-fixed .hap-playback-toggle-ex{
+	position: absolute;
+	width:30px;
+	height:30px;
+	top:-34px;
+	right:35px;
+	background-color: #27363b;
+	border-top: 1px solid #444;
+	border-left: 1px solid #444;
+	border-right: 1px solid #444;
+	cursor: pointer;
+	z-index: 2;
+	display: none;
+}
+.hap-fixed .hap-player-toggle-ex{
+	position: absolute;
+	width:30px;
+	height:30px;
+	top:-34px;
+	right:0px;
+	background-color: #27363b;
+	border-top: 1px solid #444;
+	border-left: 1px solid #444;
+	border-right: 1px solid #444;
+	cursor: pointer;
+	z-index: 2;
+}
+.hap-fixed .hap-player-toggle-ex svg{
+	height: 18px;
+}
+
+.hap-fixed .hap-right-controls{
+	position: relative;
+	float: right;
+	height: 25px;
+	top:17px;
+    display: flex;
+    margin-right: 15px;
+}
+.hap-fixed .hap-right-controls .hap-contr-btn{
+	float: left;
+	margin-left: 10px;
+}
+
+.hap-fixed .hap-playlist-bar-controls-right{
+	position: relative;
+	float: right;
+	height: 100%;
+    display: flex;
+    margin-right: 15px;
+}
+.hap-fixed .hap-playlist-bar-controls-right .hap-contr-btn{
+	float: left;
+	margin-left: 10px;
+	height: 100%;
+}
+
+.hap-fixed .hap-left-controls{
+	position: relative;
+}
+
+.hap-fixed .hap-player-thumb{
+	position: relative;
+	width:60px;
+	height:60px;
+	float: left;
+	overflow: hidden;
+	background-position: 50% 50%;
+    background-size: cover;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.hap-fixed .hap-info{
+	width: calc(50% - 135px);
+    float: left;
+    height: 60px;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center; 
+    display: flex;
+}
+.hap-fixed .hap-player-title{
+	font-size:15px;
+	color:#fff;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.hap-fixed .hap-player-artist{
+	font-size:13px;
+	color:#ffa48f;
+	margin-left: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.hap-fixed .hap-center-controls{
+	position: absolute;
+	display: inline-block;
+	height: 30px;
+	top:15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hap-fixed .hap-prev-toggle{
+	position:relative;
+	left:0px;
+	top:2px;
+	width:25px;
+	height:25px;
+	float:left;
+	margin-right:20px;
+}
+.hap-fixed .hap-playback-toggle{
+	position:relative;
+	top:0px;
+	width:30px;
+	height:30px;
+	float:left;
+	margin-right:20px;
+}
+.hap-fixed .hap-playback-toggle svg{
+	height:25px;
+}
+.hap-fixed .hap-next-toggle{
+	position:relative;
+	top:2px;
+	width:25px;
+	height:25px;
+	float:left;
+}
+
+.hap-fixed .hap-volume-toggle{
+	position:relative;
+	width:25px;
+	height:25px;
+	float:right;
+}
+.hap-fixed .hap-volume-seekbar{
+	position:relative;
+	left:0px;
+	top:5px;
+	width:100px;
+	height:16px;
+	float:right;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-fixed .hap-volume-bg{
+	position:absolute;
+	top:6px;
+	left:10px;
+	width:80px;
+	height:3px;
+	background:#ccc;
+}
+.hap-fixed .hap-volume-level{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	background:#ffa48f;
+	-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+.hap-fixed .hap-seekbar{
+	position:absolute;
+	top:-14px;
+	left:0px;
+	width: 100%;
+	height:20px;
+	cursor: pointer;
+	touch-action: none;
+	z-index: 1;
+}
+.hap-fixed .hap-progress-bg{
+	position:relative;
+	background:#ccc;
+	width:100%;
+	top:11px;
+	height:3px;
+}
+.hap-fixed .hap-load-level{
+	position:absolute;
+	background:#ccc;
+	top:0;
+	height:100%;
+}
+.hap-fixed .hap-progress-level{
+	position:absolute;
+	background:#ffa48f;
+	top:0;
+	height:100%;
+}
+
+#hap-playlist-list{
+	display:none;
+}
+.hap-fixed .hap-playlist-holder{
+	position:relative;
+	width:100%;
+	background:rgb(39 54 59);
+	overflow:hidden;
+	border-top: 2px solid #444;
+}
+.hap-fixed .hap-playlist-inner{
+	margin:20px;
+	height:215px;
+}
+.hap-fixed .hap-playlist-item{
+	font-size:15px;
+ 	padding: 4px;
+ 	margin-bottom: 5px;
+}
+.hap-fixed .hap-playlist-item:last-child{
+ 	margin-bottom: 0;
+}
+.hap-fixed .hap-playlist-item-content {
+	color:#aaa;
+}
+.hap-fixed .hap-playlist-thumb{
+	height:40px;
+	width: 40px;
+	border:1px solid #aaa;
+	margin-right: 10px;
+}
+.hap-fixed .hap-thumbimg{
+	-webkit-backface-visibility: hidden;
+	filter: grayscale(100%);
+}
+.hap-fixed .hap-playlist-item:hover .hap-playlist-thumb img{
+	filter: grayscale(0%);
+}
+
+.hap-fixed .hap-playlist-item-selected{
+	background: #ddd!important;
+}
+.hap-fixed .hap-playlist-item-selected .hap-playlist-title-wrap{
+	color:#fff;
+}
+
+.hap-fixed .hap-playlist-description{
+	font-size: 13px;
+}
+.hap-fixed .hap-playlist-description{
+	color: #555;
+}
+
+.hap-fixed .hap-playlist-duration{
+	font-size: 12px;
+}
+.hap-fixed .hap-playlist-duration{
+	color: #ccc;
+}
+.hap-fixed .hap-playlist-date{
+	font-size: 11px;
+}
+.hap-fixed .hap-playlist-date{
+	color: #787878;
+}
+
+.hap-fixed .hap-download, 
+.hap-fixed .hap-link{
+	color:#fff!important;
+}
+.hap-fixed .hap-download svg, 
+.hap-fixed .hap-link svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16px;
+    fill: currentColor;
+    transition: color .1s ease-out;
+}
+.hap-fixed .hap-download:hover svg,
+.hap-fixed .hap-link:hover svg{
+	color:#ffa48f!important;
+}
+
+.hap-fixed .hap-playlist-filter-msg span{
+	color: #fff;
+}
+
+.hap-fixed .hap-playlist-bar{
+	position:relative;
+	top:0px;
+	clear:both;
+	height:40px;
+	width:100%;
+	overflow:hidden;
+}
+.hap-fixed .hap-search-filter{
+	position:relative;
+	width:125px!important;
+	height:18px!important;
+	top:50%;
+	margin:-9px 0 0 20px!important;
+	padding:0 2px!important;
+	border:0!important;
+	-moz-border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+	border-radius:0 !important;
+	background:#ddd !important;
+	color:#333 !important;
+	box-shadow:none!important; 
+	line-height:1!important; 
+	float: left;
+	outline: none;
+}
+
+.hap-fixed .hap-sort-alpha{
+	position:relative;
+	left:5px;
+	top:0px;
+	width:25px;
+	height:100%;
+	text-align: center;
+	float: left;
+}
+.hap-fixed .hap-sort-alpha svg{
+	height: 17px;
+}
+
+/* dialog */
+
+.hap-fixed .hap-dialog-header{
+	background: #333;
+}
+
+/* range */
+
+.hap-fixed .hap-range-bg{
+	top:14px;
+	height:4px;
+}
+
+.hap-fixed .hap-range-handle-a-hit{
+	border-bottom-color:#ccc;
+}
+.hap-fixed .hap-range-handle-a-hit:hover{
+	border-bottom-color:#ffa48f;
+}
+.hap-fixed .hap-range-handle-b-hit{
+	border-top-color:#ccc;
+}
+.hap-fixed .hap-range-handle-b-hit:hover{
+	border-top-color:#ffa48f;
+}
+
+.hap-fixed .hap-range-min-time,
+.hap-fixed .hap-range-max-time{
+	color: #999;
+}
+
+.hap-fixed .hap-range-bg{
+	background:#ccc;
+}
+.hap-fixed .hap-range-level{
+	background:#ffa48f;
+}
+
+/* playback rate */
+
+.hap-fixed .hap-playback-rate-min,
+.hap-fixed .hap-playback-rate-max{
+	color: #aaa;
+}
+
+.hap-fixed .hap-playback-rate-bg{
+	height: 4px;
+	top:13px;
+}
+
+.hap-fixed .hap-range-holder,
+.hap-fixed .hap-playback-rate-holder,
+.hap-fixed .hap-share-holder{
+	background: #27363b; 
+	border: 1px solid #444;
+	box-shadow: 1px 1px 6px rgba(40,40,40,0.3);
+}
+
+.hap-fixed .hap-playback-rate-bg{
+	background:#ccc;
+}
+.hap-fixed .hap-playback-rate-level,
+.hap-fixed .hap-playback-rate-drag{
+	background:#ffa48f;
+}
+
+.hap-fixed .hap-tooltip{
+	background:#ffa48f;
+	color:#fff!important;
+}
+.hap-fixed .hap-preloader {
+    background-color: #ffa48f;
+}
+
+/* lyrics popup */
+
+.hap-fixed .hap-dialog-content{
+	background-color: #ddd!important;
+}
+
+/* stats */
+
+.hap-fixed .hap-stats svg{
+	color:#777;
+}
+.hap-fixed .hap-playlist-item-selected .hap-play-count:hover > svg,
+.hap-fixed .hap-playlist-item-selected .hap-like-count:hover > svg,
+.hap-fixed .hap-playlist-item-selected .hap-download-count:hover > svg{
+	color:#fff;
+} 
+.hap-fixed .hap-stats span{
+	color:#666;
+}
+
+.hap-fixed .hap-playlist-item-selected .hap-playlist-duration{
+	color: #aaa;
+}
+
+
+/* breakpoints */
+
+.hap-fixed.hap-breakpoint-650 .hap-player-holder {
+    height: 120px;
+}
+.hap-fixed.hap-breakpoint-650 .hap-left-controls{
+    overflow: hidden;
+    width:100%;
+}
+.hap-fixed.hap-breakpoint-650 .hap-info{
+	width: calc(100% - 60px);
+}
+.hap-fixed.hap-breakpoint-650 .hap-center-controls{
+	left:15px;
+	top:75px;
+	transform: none;
+}
+.hap-fixed.hap-breakpoint-650 .hap-right-controls {
+    clear:left;
+}
+.hap-fixed.hap-breakpoint-650 .hap-search-filter,
+.hap-fixed.hap-breakpoint-650 .hap-sort-alpha{
+	display: none;
+}
+
+
+
+
+
+

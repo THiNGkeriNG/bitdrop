@@ -1,0 +1,37 @@
+[
+    {"parent":"Marcozannone",
+	"description":"Optional description for accordion goes here. Accordion playlist can be loaded from multiple folders or mp3 files, or from json.",
+	"children":[
+			"Alkis - Little Footsteps.mp3",
+			"Marcozannone - Discovery.mp3",
+			"Marcozannone - Hopes for Tomorrow.mp3",
+			"Marcozannone - Inspirational Piano Arpeggios 3.mp3",
+			"Marcozannone - Inspiring Solo Piano.mp3",
+			"Pinkzebra - Dream Sonata Piano.mp3"
+		]
+    },
+	{"parent":"Soundroll",
+	"description":"This is a super duper album from Soundroll, check it out <a href='https://audiojungle.net/user/soundroll/portfolio?ref=Tean' target='_blank'>here</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	"children":[
+			"Soundroll - Driving In My Car.mp3",
+			"Soundroll - Feel Good Journey.mp3",
+			"Soundroll - Fight No More.mp3",
+			"Soundroll - Funky Boom.mp3",
+			"Soundroll - Pump The Club.mp3",
+			"Soundroll - Rush.mp3",
+			"Soundroll - Speed Of Fire.mp3"
+		]
+    },
+	{"parent":"Tim McMorris",
+	"children":[
+			"Tim McMorris - A Bright And Hopeful Future.mp3",
+			"Tim McMorris - Be My Valentine.mp3",
+			"Tim McMorris - Give Our Dreams Their Wings To Fly.mp3",
+			"Tim McMorris - Happy Days Are Here To Stay.mp3",
+			"Tim McMorris - Health Happiness Success.mp3",
+			"Tim McMorris - Marketing Advertising Music.mp3",
+			"Tim McMorris - Successful Business Venture.mp3"
+		]
+    }
+  
+]

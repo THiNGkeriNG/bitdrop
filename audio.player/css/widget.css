@@ -1,0 +1,219 @@
+
+#hap-wrapper{
+	position: relative;
+	max-width:200px;
+	margin: 0 auto;
+	margin-top:150px;
+	font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+.hap-widget{
+	position: relative;
+	max-width:200px;
+	margin: 0 auto;
+    display: none;
+}
+.hap-widget .hap-player-outer{
+	transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    box-shadow: 1px 1px 5px #333;
+    overflow: hidden;
+}
+.hap-widget .hap-player-thumb{
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 100%;
+}
+.hap-widget .hap-player-holder{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+.hap-widget .hap-btn{
+	display: none;
+	height:100%;
+}
+.hap-widget .hap-contr-btn svg{
+	color:#fff;
+	filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+.hap-widget .hap-btn:hover svg,
+.hap-widget .hap-contr-btn:hover > svg,
+.hap-widget .hap-contr-btn-hover svg{
+	color:#CFE8D2!important;
+}
+
+.hap-widget .hap-contr-btn svg{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	fill:currentColor;
+	transition: color .1s ease-out;
+}
+.hap-widget .hap-prev-toggle svg,
+.hap-widget .hap-next-toggle svg{
+	height: 22px;
+}
+.hap-widget .hap-playback-toggle svg{
+	height: 35px;
+}
+
+.hap-widget .hap-info{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 5px;
+	text-shadow: 1px 1px #333;
+}
+.hap-widget .hap-player-title{
+	color:#fff;
+	font-size:16px;
+	text-align: center;
+	margin:0 5px 3px 5px;
+	padding:0;
+	font-weight: 600;
+}
+.hap-widget .hap-player-artist{
+	color:#fff;
+	font-size:13px;
+	font-style: italic;
+	margin:0;
+	padding:0;
+	text-align: center;
+}
+
+.hap-widget .hap-player-controls{
+	position: absolute;
+	width:150px;
+	height:50px;
+	top:50%;
+	left:50%;
+	margin-left: -75px;
+	margin-top: -25px;
+}
+.hap-widget .hap-prev-toggle{
+	position: relative;
+	width:50px;
+	height:50px;
+	float:left;
+}
+.hap-widget .hap-playback-toggle{
+	position: relative;
+	width:50px;
+	height:50px;
+	float:left;
+}
+.hap-widget .hap-playback-toggle i{
+	font-size: 36px!important;
+}
+.hap-widget .hap-next-toggle{
+	position: relative;
+	width:50px;
+	height:50px;
+	float:left;
+}
+
+.hap-widget .hap-volume-seekbar{
+	position: absolute;
+	bottom:30px;
+	left:50%;
+	width:100px;
+	height:30px;
+	margin-left: -50px;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-widget .hap-volume-bg{
+	position:absolute;
+	top:14px;
+	left:50%;
+	margin-left: -50px;
+	width:100px;
+	height:2px;
+	background:#999;
+}
+.hap-widget .hap-volume-level{
+	position:absolute;
+	top:0;
+	left:0;
+	width:0px;
+	height:100%;
+	background:#fff;
+	-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+    border-radius: 10px;
+    -moz-box-shadow: 1px 1px 5px #333;
+	-webkit-box-shadow: 1px 1px 5px #333;
+    box-shadow: 1px 1px 5px #333;
+}
+.hap-widget .hap-volume-drag{
+	position: relative;
+	top: 50%;
+    margin-top: -9px;
+    width: 18px;
+    height: 18px;
+	border-radius: 100%;
+	background:#fff;
+	/*pointer-events:none;*/
+   	box-sizing: border-box; 
+	-webkit-transform: scale( 0.5 );
+    transform: scale( 0.5 );
+    box-shadow: 1px 1px 5px #333;
+    float: right;
+ 	margin-right: -10px;
+}
+.hap-widget .hap-volume-drag:hover,
+.hap-widget .hap-volume-drag:active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+.hap-widget .hap-seekbar{
+	position:absolute;
+	bottom:0;
+	left:0px;
+	width:100%;
+	height:6px;
+	cursor: pointer;
+	touch-action: none;
+}
+.hap-widget .hap-progress-bg{
+	position:relative;
+	background:#999;
+	width:100%;
+	top:0px;
+	height:6px;
+}
+.hap-widget .hap-load-level{
+	position:absolute;
+	background:#bbb;
+	top:0;
+	height:100%;
+}
+.hap-widget .hap-progress-level{
+	position:absolute;
+	background:#fff;
+	top:0;
+	height:100%;
+}
+
+#hap-playlist-list{
+	display:none;
+}
+
+.hap-widget .hap-tooltip{
+	background:#B1C2BE;
+	color:#fff!important;
+	box-shadow: 1px 1px 5px #333;
+}
+
+.hap-widget .hap-preloader {
+    background-color: #fff;
+}
